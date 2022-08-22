@@ -1,0 +1,30 @@
+body{
+    background-color: #ddd;
+    font-family: "Helvetica Neue", sans-serif;
+
+}
+
+main{
+    background-color: white;
+    max-width: 300px;
+    padding: 30px;
+    border-radius: 5px;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 10px gray;
+}
+
+main input{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border-radius: 0;
+    border: 1px solid gray;
+}
+
+input:focus{
+    box-shadow: 0 0 10px gray;
+}

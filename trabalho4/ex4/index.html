@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="interesse">Interesse</label>
+        <input type="text" id="interesse" name="interesse">
+    </div>
+    <ol>
+    </ol>
+
+    <script>
+        window.onload = function(){ //quando a pagina carrega essa função é executada
+            const campoInteresse = document.querySelector("#interesse"); //pega o elemento html com id 'interesse'
+            campoInteresse.addEventListener("keyup",e =>{ //quando uma tecla for precionada no elemento pego anteriormente faça
+                if(e.key == 'Enter') //verifica se a tecla precionada for 'enter'
+                    adicionarInteresse(); //executa a função 'adicionaInteresse'
+            });
+        }
+
+        function adicionarInteresse(){
+            const campoInteresse = document.querySelector("#interesse"); //pega o elemento html com id 'interesse'
+            const listaInteresses = document.querySelector("ol"); //pega o primeiro elemento 'ol' do documento
+
+            const novoLi = document.createElement("li"); //cria um novo elemento 'li'
+            const novoSpan = document.createElement('span'); //cria um novo elemento 'span'
+            const novoBotao = document.createElement('button'); //cria um novo elemento 'button'
+
+            novoSpan.textContent = campoInteresse.value; //coloca o conteudo do elemento pego na linha 27 dentro do novo span
+            novoBotao.textContent = '✖'; //coloca um x no texto do novo botão
+
+            novoLi.appendChild(novoSpan);//coloca o span dentro do novo li
+            novoLi.appendChild(novoBotao);//coloca o botão dentro do li
+            listaInteresses.appendChild(novoLi);//coloca o li na 'ol' capturada na linha 28
+
+            novoBotao.onclick = function(){ //adiciona um evento ao botão criado
+                listaInteresses.removeChild(novoLi);//remove o li respectivo ao botão prescionado
+            }
+
+            campoInteresse.value = '';//reseta o texto dentro do elemento com id 'interesse'
+        }
+    </script>
+</body>
+</html>

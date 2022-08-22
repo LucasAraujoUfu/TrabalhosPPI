@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Javascript Modal</title>
+    <style>
+        body {
+            font-family: "Helcetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.5rem;
+            background-size: cover;
+            margin: 0;
+            padding: 30px;
+        }
+        .modal{
+            background-color: #0006;
+            display: none;
+            width: 100%;
+            height: 100%;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            overflow: auto;
+            z-index: 1;
+        }
+
+        .modalContent{
+            background-color: #eee;
+            margin: auto;
+            padding: 20px;
+            border: 0.5px solid #aaa;
+            box-shadow: 0 0 5px #333;
+
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .modalContent button{
+            width: 100%;
+            background-color: rgb(179,213,235);
+            border-radius: 2px;
+            border: 1px solid rgb(159,200,255);
+            padding: 5px;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .modalContent button:hover{
+            background-color: rgb(200, 223, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Cacilds</h1>
+        <p>Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.Todo
+            mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Não sou faixa preta cumpadi, sou preto
+            inteiris, inteiris.Suco de cevadiss deixa as pessoas mais interessantis.</p>
+
+        <p>de cevadiss deixa as pessoas mais interessantis.Sapien in monti palavris qui num significa nadis i pareci
+            latim.Quem num gosta di mé, boa gentis num é.Si num tem leite então bota uma pinga aí cumpadi!</p>
+
+        <button type="button" id="btnOpenModal">Abrir Modal</button>
+    </main>
+
+    <div id="modalTeste" class="modal">
+        <div class="modalContent">
+            <h2>Olá! Seja bem vindo</h2>
+            <button class="buttonClose">Ok</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            const modal = document.querySelector(".modal");
+            const buttonClose = modal.querySelector(".buttonClose");
+
+            buttonClose.addEventListener("click",function(){
+                modal.style.display = 'none';
+            });
+
+            const buttonOpenModal = document.getElementById("btnOpenModal");
+            buttonOpenModal.addEventListener("click",function(){
+                modal.style.display = 'block';
+            })
+        }
+    </script>
+
+</body>
+
+</html>

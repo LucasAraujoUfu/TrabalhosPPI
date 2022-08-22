@@ -1,0 +1,21 @@
+body{
+    background-color: #ddd;
+    color: #444;
+    font: 1em "Helvetica Neue";
+    width: 60%;
+    margin: 0 auto;
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+}
+
+section{
+    border-top: solid;
+    border-top-color: gray;
+}
+
+h1, h2{
+    color: rgb(140, 76, 8);
+}

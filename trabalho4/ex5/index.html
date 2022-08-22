@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulários em HTML</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h3>Cadastro de Usuário</h3>
+            <form name="formCadastro" action="action.php" method="post">
+                <div>
+                    <label for="usuario">Usuário: </label>
+                    <input type="text" name="usuario" id="usuario" required><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" required><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required><br>
+                    <span></span>
+                </div>
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </main>
+    <script>
+        window.onload = function(){
+            document.forms.formCadastro.onsubmit = va
+        }
+    </script>
+</body>
+
+</html>

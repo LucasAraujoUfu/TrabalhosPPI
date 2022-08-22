@@ -1,0 +1,23 @@
+body{
+    background-color: #ddd;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+fieldset{
+    border-radius: 10px;
+}
+
+form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input:invalid + span::after{
+    color:red;
+    content: '✖';
+}
+
+input::valid + span::after{
+    color: green;
+    content: '✓';
+}
